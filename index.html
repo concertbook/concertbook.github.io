@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>演唱會票夾</title>
+<meta name="description" content="收藏看過的演唱會：會動的票根、現場錄音、世界地圖。資料只存在你的手機。">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#CFD8EA">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="票夾">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;900&family=Noto+Sans+TC:wght@400;500;900&family=Josefin+Sans:wght@400;600&family=Courier+Prime&family=Alegreya+Sans+SC:wght@800&family=Caveat:wght@600&display=swap">
+<link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+<div class="app">
+  <div class="stage" id="stage">
+    <div id="map" aria-label="演唱會世界地圖"></div>
+    <div class="map-msg" id="mapMsg">地圖載入中…</div>
+    <nav class="nav" aria-label="主選單">
+      <span>票夾<span class="dot"></span></span>
+      <span id="count"></span>
+      <button data-act="openadd" aria-label="新增一張票">＋ 新增</button>
+    </nav>
+    <div class="display" id="display" aria-live="polite"></div>
+    <div class="zoom"><button data-z="1.7" aria-label="放大地圖">+</button><button data-z="0.6" aria-label="縮小地圖">−</button><button data-act="world" aria-label="看全世界" style="font-size:13px">◎</button></div>
+    <div class="coords" id="coords"></div>
+    <div class="deck" id="deck">
+      <button class="grab" id="grab" data-act="all" aria-label="打開全部票根"><i></i>往上拉 · 全部票根</button>
+      <div class="track" id="track" aria-label="我的票，左右滑動"></div>
+    </div>
+    <div class="pickbar" id="pickBar" hidden><span>點地圖選擇場館位置（可先縮放）</span><button data-act="pickcancel">取消</button></div>
+    <div id="layer"></div>
+    <div class="toast" id="toast" hidden></div>
+  </div>
+</div>
+<audio id="player" preload="none"></audio>
+<script src="./js/data.js" defer></script>
+<script src="./js/store.js" defer></script>
+<script src="./js/tickets.js" defer></script>
+<script src="./js/stage.js" defer></script>
+<script src="./js/map.js" defer></script>
+<script src="./js/ui.js" defer></script>
+<script src="./js/app.js" defer></script>
+</body>
+</html>

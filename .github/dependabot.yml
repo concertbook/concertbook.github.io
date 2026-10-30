@@ -1,0 +1,7 @@
+# 每週自動檢查 GitHub Actions 是否有安全更新
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

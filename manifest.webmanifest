@@ -1,0 +1,17 @@
+{
+  "name": "演唱會票夾",
+  "short_name": "票夾",
+  "description": "收藏看過的演唱會：會動的票根、現場錄音、世界地圖。",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#CFD8EA",
+  "theme_color": "#CFD8EA",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "./icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
